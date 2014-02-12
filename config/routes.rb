@@ -1,9 +1,11 @@
 LoginCounter::Application.routes.draw do
 
+  root 'flow#index'
+
   post 'users/add' => 'users#add'
   post 'users/login' => 'users#login'
-  post 'TESTAPI/resetFixture' => 'testapi#resetFixture'
-  post 'TESTAPI/unitTests' => 'testapi#unitTests'
+  post 'TESTAPI/resetFixture' => 'testapi#reset_fixture'
+  post 'TESTAPI/unitTests' => 'testapi#unit_tests'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

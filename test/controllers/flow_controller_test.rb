@@ -1,8 +1,7 @@
 require 'test_helper'
 
-class TestapiControllerTest < ActionController::TestCase
+class FlowControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end
-
 end

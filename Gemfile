@@ -35,6 +35,9 @@ end
 #Heroku compatibility
 gem 'rails_12factor'
 
+# Fuck this fucking bullshit
+gem 'rspec-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

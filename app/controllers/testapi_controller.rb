@@ -8,7 +8,7 @@ class TestapiController < ApplicationController
   def unit_tests
 
     testresults = `rake test`
-    
+    puts testresults
     splitresults = testresults.split("\n")[-1].split(", ")
 
     numtests = splitresults[0].split(" ")[0].to_i

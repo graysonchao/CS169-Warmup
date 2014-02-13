@@ -3,11 +3,11 @@ class TestapiController < ApplicationController
   
   def reset_fixture
     User.destroy_all
-    render json: { "errCode" => 1 }
+    render :json => { "errCode" => 1 }
   end
 
   def unit_tests
-    render json: { "errCode" => 1 }
+    render status: :ok, json: { "errCode" => 1 }
   end
 
 end

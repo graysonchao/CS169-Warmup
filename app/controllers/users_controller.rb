@@ -7,7 +7,11 @@ class UsersController < ApplicationController
 
     @count, @errCode = User.add(name, password)
 
-    render :json => { :errCode => @errCode, :count => @count}
+    if @count > 0 then
+      render :json => { :errCode => @errCode, :count => @count}
+    else
+      render :json => { :errCode => @errCode }
+    end
   end
 
   def login
@@ -15,7 +19,11 @@ class UsersController < ApplicationController
     password = request["password"]
 
     @count, @errCode = User.login(name, password)
-    render :json => { :errCode => @errCode, :count => @count}
+    if @count > 0 then
+      render :json => { :errCode => @errCode, :count => @count}
+    else
+      render :json => { :errCode => @errCode }
+    end
   end
 
 end

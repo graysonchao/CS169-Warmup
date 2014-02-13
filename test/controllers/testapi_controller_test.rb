@@ -5,4 +5,8 @@ class TestapiControllerTest < ActionController::TestCase
   #   assert true
   # end
 
+  test "resetFixture should respond with only an errCode" do
+    post :reset_fixture, post: {}
+    assert_response :ok
+  end
 end

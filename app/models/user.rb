@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   # Returns a tuple of [USER login ct, error code].
   def self.login(user, pass)
 
-    if pass.length > 128 then
+    if !pass or pass.length > 128 then
       return [0, ERR_BAD_PASSWORD]
     end
 
@@ -30,9 +30,9 @@ class User < ActiveRecord::Base
   # Returns a tuple of [USER login ct, error code].
   def self.add(user, pass)
 
-    if user.length > 128 then
+    if !user or user.length > 128 then
       return [0, ERR_BAD_USERNAME]
-    elsif pass.length > 128 then
+    elsif !pass or pass.length > 128 then
       return [0, ERR_BAD_PASSWORD]
     elsif User.find_by_name(user) then
       return [0, ERR_USER_EXISTS]

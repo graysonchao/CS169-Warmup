@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   def self.login(user, pass)
 
     if !pass or pass.length > 128 then
-      return [0, ERR_BAD_PASSWORD]
+      return [0, ERR_BAD_CREDENTIALS]
     end
 
     u = User.find_by_name_and_password(user, pass)

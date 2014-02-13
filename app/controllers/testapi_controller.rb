@@ -8,10 +8,10 @@ class TestapiController < ApplicationController
   def unit_tests
 
     testresults = `rake spec`
-    splitresults = testresults.split("\n")[-1].split(", ")
+    splitresults = testresults.split("\n")[-3].split(", ")
 
     numtests = splitresults[0].split(" ")[0].to_i
-    numfails = splitresults[2].split(" ")[0].to_i
+    numfails = splitresults[1].split(" ")[0].to_i
     render :json => { :errCode => 1,
       :totalTests => numtests,
       :nrFailed => numfails,

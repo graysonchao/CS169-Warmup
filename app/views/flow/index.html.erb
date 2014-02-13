@@ -5,8 +5,26 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 <!-- This is all the page independent functions.  The ones which directly interact with the page are inlined below. -->
-</head>
+<style type="text/css">
+.box {
+    width: 300px;
+    height: 200px;
+    border: thin black solid;
+    background-color: rgb(243,243,243);
+}
 
+.message {
+    margin: 10px 20px 10px 20px;
+    border: thin black solid;
+}
+
+body {
+	font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+</style>
+</head>
+<body>
 <center>
 <div id="login-page" class="box">
   <div id="login-message" class="message"></div>
@@ -115,7 +133,6 @@ $('#logout-button').click(function() {
 });
 -->
 </script>
-
-<body>
 </body>
+
 </html>

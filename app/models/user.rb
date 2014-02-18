@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
 
-  # I don't really know what the idiomatic way to do this is.
   SUCCESS = 1
   ERR_BAD_CREDENTIALS = -1
   ERR_USER_EXISTS = -2 

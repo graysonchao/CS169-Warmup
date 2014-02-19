@@ -1,19 +1,66 @@
-/* This file contains the style parameters for the sample client. */
-
-
-.box {
-    width: 300px;
-    height: 200px;
-    border: thin black solid;
-    background-color: rgb(243,243,243);
-}
-
-.message {
-    margin: 10px 20px 10px 20px;
-    border: thin black solid;
-}
-
 body {
-	font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: url('/assets/brick_pattern.png');
 }
 
+h1#title {
+  margin-bottom: 20px;
+}
+
+#banner {
+  text-align: center;
+  width: 100%;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 36px;
+  background: -webkit-linear-gradient(#fb0, #f50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fb0;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000,  1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+ }
+
+.login.box.container {
+   margin: 0 auto;
+   text-align: center;
+   height: 200px;
+   width: 400px;
+   background: url('/assets/box_bg.png');
+   background-repeat: no-repeat;
+   font-family: 'Press Start 2P', cursive;
+}
+
+.login.box {
+  height: 200px;
+  padding-top:35px;
+  color: #fff;
+}
+
+.login .field{
+  display: block;
+}
+
+form.login {
+  text-align: center;
+}
+
+input.login {
+  padding: 5px;
+  background: #000;
+  border: 2px solid #fff;
+  font-family: "Press Start 2P", serif;
+  width: 150px;
+  color: #fff;
+}
+
+.btn-box {
+  padding-top: 1em;
+}
+
+.btn {
+  width: 70px;
+  height: 36px;
+  padding: 5px;
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+/* adapted from http://css-tricks.com/parallax-background-css3/ */

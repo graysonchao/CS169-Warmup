@@ -35,7 +35,8 @@ group :doc do
 end
 
 #Heroku compatibility
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
+gem 'rails_serve_static_assets', group: :production
 
 # Fuck this fucking bullshit
 gem 'rspec-rails'

@@ -1,7 +1,3 @@
-body {
-  background: url('/assets/brick_pattern.png');
-}
-
 h1#title {
   margin-bottom: 20px;
 }
@@ -11,26 +7,53 @@ h1#title {
   width: 100%;
   font-family: 'Press Start 2P', cursive;
   font-size: 36px;
-  background: -webkit-linear-gradient(#fb0, #f50);
+  background: -webkit-linear-gradient(#fb0, #f00);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: #fb0;
-  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000,  1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
- }
-
-.login.box.container {
-   margin: 0 auto;
-   text-align: center;
-   height: 200px;
-   width: 400px;
-   background: url('/assets/box_bg.png');
-   background-repeat: no-repeat;
-   font-family: 'Press Start 2P', cursive;
+  -webkit-text-fill-color: transparent;
+  z-index: 400;
+  position: relative;
 }
 
-.login.box {
+
+.box.container {
+  font-family: 'Press Start 2P', cursive;
+  position: relative;
+  z-index:400;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.message.box.container {
+  height: 2.0em;
+}
+
+#msg {
+  font-family: 'Press Start 2P', cursive;
+  position: relative;
+  z-index:400;
+  color: #fff;
+  background: -webkit-linear-gradient(#06b, #005);
+  padding: 7px;
+  border: 2px solid #fff;
+}
+
+.login.box.container {
+  height: 200px;
+}
+
+.login.box.inner {
+  background: url('/assets/box_bg.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 400px;
   height: 200px;
   padding-top:35px;
-  color: #fff;
+}
+
+.login.box.inputs {
+  padding-top: 20px;
 }
 
 .login .field{
@@ -61,6 +84,31 @@ input.login {
   background: #000;
   color: #fff;
   border: 2px solid #fff;
+  text-decoration: none;
 }
 
-/* adapted from http://css-tricks.com/parallax-background-css3/ */
+.logout.btn {
+  position: relative;
+  top: 50px;
+}
+
+body {
+  background: black url(/assets/background.png) repeat 5% 5%;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 100;
+}
+
+#midground {
+  background: url(/assets/midground.png) repeat 20% 20%;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 200;
+}
+
+#foreground {
+  background: url(/assets/foreground.png) repeat 90% 110%;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 300;
+}

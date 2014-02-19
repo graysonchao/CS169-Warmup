@@ -8,8 +8,16 @@ h1#title {
   font-family: 'Press Start 2P', cursive;
   font-size: 36px;
   background: -webkit-linear-gradient(#fb0, #f00);
+  background: -o-linear-gradient(#fb0, #f00); 
+  background: -moz-linear-gradient(#fb0, #f00); 
+  background: -ms-linear-gradient(#fb0, #f00); 
+  background: linear-gradient(#fb0, #f00);
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
   z-index: 400;
   position: relative;
 }
@@ -35,6 +43,10 @@ h1#title {
   z-index:400;
   color: #fff;
   background: -webkit-linear-gradient(#06b, #005);
+  background: -o-linear-gradient(#06b, #005);
+  background: -moz-linear-gradient(#06b, #005);
+  background: -ms-linear-gradient(#06b, #005);
+  background: linear-gradient(#06b, #005);
   padding: 7px;
   border: 2px solid #fff;
 }

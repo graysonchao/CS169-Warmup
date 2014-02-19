@@ -1,0 +1,104 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+h1#title {
+  margin-bottom: 20px;
+}
+
+#banner {
+  text-align: center;
+  width: 100%;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 36px;
+  background: -webkit-linear-gradient(#fb0, #f50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fb0;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000,  1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.login.box.container {
+  position:absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  z-index:400;
+  margin: 0 auto;
+  text-align: center;
+  height: 200px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.login.box.inner {
+  background: url('/assets/box_bg.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 400px;
+  height: 200px;
+  padding-top:35px;
+  color: #fff;
+}
+
+.login.box.inputs {
+  padding-top: 20px;
+}
+
+.login .field{
+  display: block;
+}
+
+form.login {
+  text-align: center;
+}
+
+input.login {
+  padding: 5px;
+  background: #000;
+  border: 2px solid #fff;
+  font-family: "Press Start 2P", serif;
+  width: 150px;
+  color: #fff;
+}
+
+.btn-box {
+  padding-top: 1em;
+}
+
+.btn {
+  width: 70px;
+  height: 36px;
+  padding: 5px;
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+body {
+  background: black url(/assets/background.png) repeat 5% 5%;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 100;
+}
+
+#midground {
+  background: url(/assets/midground.png) repeat 20% 20%;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 200;
+}
+
+#foreground {
+  background: url(/assets/foreground.png) repeat 90% 110%;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 300;
+}

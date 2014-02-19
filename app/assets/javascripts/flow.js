@@ -12,42 +12,15 @@ function errorMessage(errCode) {
 	}
 }
 
-function loginClick() {
-	var user = $('#user').val();
-	var password = $('#password').val();
-
+function ajaxRequest(url, data) {
 	$.ajax({
 		type: 'POST',
-		url: '/users/login',
-		data: JSON.stringify({
-			'user': user,
-			'password': password
-		}),
+		url: url,
+		data: data,
 		contentType: "application/json",
 		success: success,
 		failure: failure
 	});
-}
-
-function addClick() {
-	var user = $('#user').val();
-	var password = $('#password').val();
-
-	$.ajax({
-		type: 'POST',
-		url: '/users/add',
-		data: JSON.stringify({
-			'user': user,
-			'password': password
-		}),
-		contentType: "application/json",
-		success: success,
-		failure: failure
-	});
-}
-
-function failure(data) {
-	$('#msg').html("An internal error occurred.");
 }
 
 function success(data) {
@@ -76,10 +49,33 @@ function success(data) {
 	}
 }
 
+/* This should never happen assuming an OK backend */
+function failure(data) {
+	$('#msg').html("An internal error occurred.");
+}
+
+/* Reset the DOM. */
 function reset() {
 	$('#msg').html("Please enter your credentials below.");
-	$('#login-btn').click(loginClick);
-	$('#add-btn').click(addClick);
+
+	/* Change me to your backend URL of choice. */
+	var baseURL = "/";
+
+	$('#login-btn').click(function() {
+		var data = {
+			'user': $('#user').val(),
+			'password': $('#password').val()
+		};
+		ajaxRequest(baseURL + 'users/login', JSON.stringify(data));
+	});
+
+	$('#add-btn').click(function() {
+		var data = {
+			'user': $('#user').val(),
+			'password': $('#password').val()
+		};
+		ajaxRequest(baseURL + 'users/add', JSON.stringify(data));
+	});
 }
 
 $(document).ready(function() {

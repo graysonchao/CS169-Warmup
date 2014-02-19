@@ -5,6 +5,8 @@ class UsersController < ApplicationController
     name = request["user"]
     password = request["password"]
 
+    # Not strictly necessary to assign to ivars like this,
+    # but it makes it easier to screw around with JSON response crafting
     @count, @errCode = User.add(name, password)
 
     if @count > 0 then

@@ -1,3 +1,4 @@
+# Handles TESTAPI calls.
 class TestapiController < ApplicationController
   
   def reset_fixture
@@ -7,6 +8,7 @@ class TestapiController < ApplicationController
 
   def unit_tests
 
+    # Backticks return the output of the command inside
     testresults = `rake spec`
     splitresults = testresults.split("\n")[-3].split(", ")
 

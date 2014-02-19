@@ -8,7 +8,7 @@ h1#title {
   font-family: 'Press Start 2P', cursive;
   font-size: 36px;
   background: -webkit-linear-gradient(#fb0, #f00);
-  background: -o-linear-gradient(#fb0, #f00); 
+  background: -o-linear-gradient(#fb0, #f00);
   background: -moz-linear-gradient(#fb0, #f00); 
   background: -ms-linear-gradient(#fb0, #f00); 
   background: linear-gradient(#fb0, #f00);
@@ -17,12 +17,12 @@ h1#title {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  text-fill-color: transparent;
+  text-fill-color: transparent; /* HAHAHAHAHAHAHA WHY GOD */
   z-index: 400;
   position: relative;
 }
 
-
+/* Boxes */
 .box.container {
   font-family: 'Press Start 2P', cursive;
   position: relative;
@@ -104,15 +104,16 @@ input.login {
   top: 50px;
 }
 
+/* Parallax starzz */
 body {
-  background: black url(/assets/background.png) repeat 5% 5%;
+  background: black url(/assets/background.png) repeat 5% 10%;
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: 100;
 }
 
 #midground {
-  background: url(/assets/midground.png) repeat 20% 20%;
+  background: url(/assets/midground.png) repeat 20% 25%;
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: 200;
@@ -123,4 +124,16 @@ body {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: 300;
+}
+
+/* Annoying browser elitism support styles */
+.browser-msg {
+  font-family: 'Press Start 2P', cursive;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.browser-msg > h4 {
+    font-size: 8px;
 }

@@ -80,4 +80,23 @@ function reset() {
 
 $(document).ready(function() {
 	reset();
+	var width = $('body').width();
+	$('#midground').css({'background-position-x': width});
+	$('#foreground').css({'background-position-x': width});
+	$('body').css({'background-position-x': width});
+
+	/* Node is a DOM node */
+	var animateStars = function(node, distance, speed) {
+		$(node).animate({
+			"background-position-x": distance,
+		}, speed, 'linear', function() {
+			$(node).css({'background-position-x': width});
+			animateStars(node, distance, speed);
+		});
+	}
+
+	animateStars($('body'), width * 2, 96000);
+	animateStars($('#midground'), width * 2, 54000);
+	animateStars($('#foreground'), width * 2, 36000);
+
 });

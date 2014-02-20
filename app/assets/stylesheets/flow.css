@@ -110,6 +110,7 @@ body {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: 100;
+  -webkit-transition: left 330s linear;
 }
 
 #midground {
@@ -117,6 +118,7 @@ body {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: 200;
+  -webkit-transition: left 300s linear;
 }
 
 #foreground {
@@ -124,6 +126,7 @@ body {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: 300;
+  -webkit-transition: left 270s linear;
 }
 
 /* Annoying browser elitism support styles */
